@@ -2,10 +2,49 @@
 <html>
 <head>
     <title>My Photo Page</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+        .grid img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <h1>My Photos</h1>
-    <img src="https://raw.githubusercontent.com/Morezino/booPBIimghost.github.io/main/tavana.png" alt="My Photo">
+    <h1>PBI Photos</h1>
+    <div class="grid" id="imageGrid"></div>
+
+    <script>
+        // List of image file names
+        const imageNames = [
+            "hashemi.png",
+            "khorasani.png",
+            "shamshiri.png",
+            "tavana.png",
+            "sanjagh.png",
+            "yektanet.png",
+            // Add more image file names here
+        ];
+
+        // Function to create image elements and add them to the grid
+        function populateGrid() {
+            const grid = document.getElementById("imageGrid");
+
+            imageNames.forEach(imageName => {
+                const img = document.createElement("img");
+                img.src = `Stuff/${imageName}`; // Path to the image
+                grid.appendChild(img);
+            });
+        }
+
+        // Call the populateGrid function when the page is loaded
+        window.onload = populateGrid;
+    </script>
 </body>
 </html>
 
