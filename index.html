@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PBI Page</title>
+    <title>My Photo Page</title>
     <style>
         .grid {
             display: grid;
@@ -17,34 +17,15 @@
 </head>
 <body>
     <h1>PBI Photos</h1>
-    <div class="grid" id="imageGrid"></div>
-
-    <script>
-        // List of image file names
-        const imageNames = [
-            "hashemi.png",
-            "khorasani.png",
-            "shamshiri.png",
-            "tavana.png",
-            "sanjagh.png",
-            "yektanet.png",
-            // Add more image file names here
-        ];
-
-        // Function to create image elements and add them to the grid
-        function populateGrid() {
-            const grid = document.getElementById("imageGrid");
-
-            imageNames.forEach(imageName => {
-                const img = document.createElement("img");
-                img.src = `Stuff/${imageName}`; // Path to the image
-                grid.appendChild(img);
-            });
-        }
-
-        // Call the populateGrid function when the page is loaded
-        window.onload = populateGrid;
-    </script>
+    <div class="grid" id="imageGrid">
+        <!-- Image URLs here -->
+        <img src="https://raw.githubusercontent.com/Morezino/booPBIimghost.github.io/main/Stuff/hashemi.png" alt="Image 1">
+        <img src="https://raw.githubusercontent.com/Morezino/booPBIimghost.github.io/main/Stuff/khorasani.png" alt="Image 2">
+        <img src="https://raw.githubusercontent.com/Morezino/booPBIimghost.github.io/main/Stuff/sanjagh.png" alt="Image 3">
+        <img src="https://raw.githubusercontent.com/Morezino/booPBIimghost.github.io/main/Stuff/shamshiri.png" alt="Image 4">
+        <img src="https://raw.githubusercontent.com/Morezino/booPBIimghost.github.io/main/Stuff/tavana.png" alt="Image 5">
+        <img src="https://raw.githubusercontent.com/Morezino/booPBIimghost.github.io/main/Stuff/yektanet.png" alt="Image 6">
+        <!-- Add more image URLs as needed -->
+    </div>
 </body>
 </html>
-
